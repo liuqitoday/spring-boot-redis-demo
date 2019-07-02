@@ -182,7 +182,7 @@ appendonly yes
 
 ### Spring Boot 配置
 
-我demo中使用的 Spring Boot 版本为 ```2.1.6.RELEASE```
+我demo中使用的 Spring Boot 版本为 `2.1.6.RELEASE`
 
 添加依赖
 
@@ -193,7 +193,7 @@ appendonly yes
 </dependency>
 ```
 
-查看依赖可知现在版本的使用的默认的reids客户端为 ```Lettuce```
+查看依赖可知现在版本的使用的默认的reids客户端为 `Lettuce`
 
 通过查看`LettuceConnectionConfiguration` 可发现，它可以为我们初始化一个 `RedisTemplate<Object, Object>` 类型的 redisTemplate，和一个 `RedisTemplate<String, String>` 类型的 stringRedisTemplate。
 
@@ -225,34 +225,34 @@ public class RedisAutoConfiguration {
 }
 ```
 
-后面的例子中为了方便测试，直接注入```stringRedisTemplate``` 来使用，当然你也可以自定义自己需要类型的 RedisTemplate。针对不同的部署方式，修改application.yml 配置文件如下：
+后面的例子中为了方便测试，直接注入`stringRedisTemplate` 来使用，当然你也可以自定义自己需要类型的 RedisTemplate。针对不同的部署方式，修改application.yml 配置文件如下：
 
 #### 单机
 
 ```
 spring:
-redis:
-  host: 127.0.0.1
-  port: 6379
+  redis:
+    host: 127.0.0.1
+    port: 6379
 ```
 
 #### 哨兵
 
 ```
 spring:
-redis:
-  sentinel:
-	master: mymaster
-	nodes: 127.0.0.1:26379, 127.0.0.1:26380
+  redis:
+    sentinel:
+	  master: mymaster
+	  nodes: 127.0.0.1:26379, 127.0.0.1:26380
 ```
 
 #### 集群
 
 ```
 spring:
-redis:
-  cluster:
-	nodes: 127.0.0.1:7000, 127.0.0.1:7001, 127.0.0.1:7002, 127.0.0.1:7003, 127.0.0.1:7004, 127.0.0.1:7005
+  redis:
+    cluster:
+	  nodes: 127.0.0.1:7000, 127.0.0.1:7001, 127.0.0.1:7002, 127.0.0.1:7003, 127.0.0.1:7004, 127.0.0.1:7005
 ```
 
   
