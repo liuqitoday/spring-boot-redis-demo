@@ -2,7 +2,7 @@
 
 Redis 常用的数据类型：strings（字符串）、Lists（列表）、Hashes（哈希）、Sets（集合）、Sorted sets（有序集合） 等。
 
-官方文档对于数据类型说明 https://redis.io/topics/data-types-intro，具体介绍以及用法可以参考官方文档。
+官方文档对于数据类型说明 https://redis.io/topics/data-types-intro
 
 #### Redis Strings
 
